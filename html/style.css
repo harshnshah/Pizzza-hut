@@ -1,0 +1,173 @@
+
+    
+ 
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(to bottom, #f8efd4, #f1c27d);
+            overflow-x: hidden;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            background: #d35400;
+            color: white;
+            padding: 1.5rem 1rem;
+            animation: fadeInDown 1s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
+        }
+
+        /* Floating Pizza Animations */
+        .floating-pizza {
+            position: absolute;
+            width: 100px;
+            animation: floatPizza 5s infinite ease-in-out;
+            pointer-events: none;
+        }
+
+        .pizza1 { top: 10%; left: 10%; }
+        .pizza2 { top: 50%; left: 80%; }
+        .pizza3 { top: 30%; left: 40%; }
+
+        @keyframes floatPizza {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        nav {
+            background: #f39c12;
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease-in-out, color 0.3s;
+        }
+
+        nav a:hover {
+            color: #333;
+            transform: scale(1.2);
+        }
+
+        .hero {
+            text-align: center;
+            background: url('https://source.unsplash.com/1920x1080/?pizza') no-repeat center/cover;
+            color: white;
+            padding: 5rem 1rem;
+            animation: zoomIn 1.5s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Parallax Floating Toppings */
+        .floating-topping {
+            position: absolute;
+            animation: floatTopping 10s infinite linear;
+            opacity: 0.8;
+        }
+
+        .topping1 { top: 20%; left: 30%; }
+        .topping2 { top: 40%; left: 60%; }
+        .topping3 { top: 80%; left: 10%; }
+
+        @keyframes floatTopping {
+            from { transform: translateY(0) rotate(0); }
+            to { transform: translateY(-100vh) rotate(360deg); }
+        }
+
+        #map {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: #fefefe;
+            animation: fadeIn 1.5s;
+        }
+
+        #map h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        iframe {
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+  
